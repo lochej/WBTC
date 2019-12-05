@@ -1,0 +1,10 @@
+[Unit]
+Description=Time Circuit Display Daemon Service
+
+[Service]
+WorkingDirectory=/home/debian/wbtc_manager/timecircuit/
+ExecStart=/home/debian/wbtc_manager/timecircuit/timecircuitd.py
+User=debian
+
+[Install]
+WantedBy=multi-user.target

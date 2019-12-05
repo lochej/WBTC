@@ -1,0 +1,12 @@
+#!/bin/bash
+
+#Loads the FPGA with its firmware image
+
+insertdtbo=/home/debian/fpga_utils/insert_overlay
+dtbo=/home/debian/wbtc_manager/fluxcapacitor/fpga_ws2812/fpga_overlay.dtbo
+framebuffer_proc=/home/debian/wbtc_manager/fluxcapacitor/fpga_ws2812/HPS_WS2812_FrameBuffer_Brightness
+
+#Starts the framebuffer
+$insertdtbo fpga $dtbo
+sleep 3
+$framebuffer_proc

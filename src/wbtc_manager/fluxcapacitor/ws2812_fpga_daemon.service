@@ -1,0 +1,10 @@
+[Unit]
+Description=HPS WS2812 Framebuffer Daemon Service
+
+[Service]
+WorkingDirectory=/home/debian/wbtc_manager/fluxcapacitor/
+ExecStart=/home/debian/wbtc_manager/fluxcapacitor/ws2812_fpga_daemon
+User=root
+
+[Install]
+WantedBy=multi-user.target

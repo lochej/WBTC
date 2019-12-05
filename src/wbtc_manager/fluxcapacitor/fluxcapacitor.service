@@ -1,0 +1,12 @@
+[Unit]
+Description=Flux Capacitor Daemon Service
+After=ws2812_fpga_daemon.service
+
+[Service]
+WorkingDirectory=/home/debian/wbtc_manager/fluxcapacitor/
+ExecStart=/home/debian/wbtc_manager/fluxcapacitor/fluxcapacitord.py
+User=debian
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
