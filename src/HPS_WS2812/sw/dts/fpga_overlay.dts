@@ -1,0 +1,64 @@
+/dts-v1/;
+/plugin/;
+/ {
+	fragment@0 {
+  		target-path = "/soc/base-fpga-region";
+  		#address-cells = <1>;
+  		#size-cells = <1>;
+  		__overlay__ {
+                        #address-cells = <1>;
+			#size-cells = <1>;
+
+			firmware-name = "fpga_firmware.rbf";
+
+                        fpga-bridges = <&fpga_bridge0>;
+
+			ranges = <0x00000000 0xff200000 0x00000080>,
+				<0x00000420 0xff200420 0x00000010>,
+				<0x00000410 0xff200410 0x00000010>,
+				<0x00000400 0xff200400 0x00000010>;
+
+			led_pio: gpio@420 {
+				compatible = "altr,pio-18.1", "altr,pio-1.0";
+				reg = <0x420 0x00000010>;
+				altr,gpio-bank-width = <8>;
+                                altr,ngpio = <8>;
+				resetvalue = <0>;
+                                #gpio-cells = <2>;
+				gpio-controller;
+			}; 
+
+			sw_pio: gpio@410 {
+				compatible = "altr,pio-18.1", "altr,pio-1.0";
+				reg = <0x410 0x00000010>;
+				interrupt-parent = <&intc>;
+				interrupts = <0 41 1>;
+				altr,gpio-bank-width = <4>;
+                                altr,ngpio = <4>;
+				altr,interrupt-type = <3>;
+				altr,interrupt_type = <3>;
+				edge_type = <2>;
+				level_trigger = <0>;
+				resetvalue = <0>;
+				#gpio-cells = <2>;
+				gpio-controller;
+			}; 
+
+			pb_pio: gpio@400 {
+				compatible = "altr,pio-18.1", "altr,pio-1.0";
+				reg = <0x400 0x00000010>;
+				interrupt-parent = <&intc>;
+				interrupts = <0 40 1>;
+				altr,gpio-bank-width = <2>;
+                                altr,ngpio = <2>;
+				altr,interrupt-type = <3>;
+				altr,interrupt_type = <3>;
+				edge_type = <2>;
+				level_trigger = <0>;
+				resetvalue = <0>;
+				#gpio-cells = <2>;
+				gpio-controller;
+			}; 
+		};
+	};
+};
