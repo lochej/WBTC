@@ -22,4 +22,4 @@ Or use a Framebuffer and a daemon to do driver access for you. You will just wri
 
 1. [Version without brightness control](./sw/HPS_WS2812_FrameBuffer)
 
-2. [Version with brightness control](/sw/HPS_WS2812_FrameBuffer_Brightness)
+2. [Version with brightness control](./sw/HPS_WS2812_FrameBuffer_Brightness)
