@@ -32,7 +32,7 @@
 				compatible = "altr,pio-18.1", "altr,pio-1.0";
 				reg = <0x410 0x00000010>;
 				interrupt-parent = <&intc>;
-				interrupts = <0 41 1>;
+				interrupts = <0 40 1>;
 				altr,gpio-bank-width = <4>;
                                 altr,ngpio = <4>;
 				altr,interrupt-type = <3>;
@@ -48,7 +48,7 @@
 				compatible = "altr,pio-18.1", "altr,pio-1.0";
 				reg = <0x400 0x00000010>;
 				interrupt-parent = <&intc>;
-				interrupts = <0 40 1>;
+				interrupts = <0 41 1>;
 				altr,gpio-bank-width = <2>;
                                 altr,ngpio = <2>;
 				altr,interrupt-type = <3>;
