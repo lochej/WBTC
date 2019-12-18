@@ -1,0 +1,10 @@
+.metadata
+debugger
+.ut.dat
+*.o
+*.a
+*.d
+*.mk
+makefile
+.settings
+HPS_WS2812_FrameBuffer_Brightness/Native Debug
