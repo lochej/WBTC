@@ -1,0 +1,10 @@
+[Unit]
+Description=Power off button service
+
+[Service]
+WorkingDirectory=/home/debian/wbtc_manager/GPIO
+ExecStart=/home/debian/wbtc_manager/GPIO/button_poweroff.sh
+User=root
+
+[Install]
+WantedBy=multi-user.target
