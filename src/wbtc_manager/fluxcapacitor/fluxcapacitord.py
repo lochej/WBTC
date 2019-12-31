@@ -158,17 +158,27 @@ def get_process_args():
     global process_conf
     #process_args=["./TimeCircuitDisplay","15"]
     #process_args=["python3","TimeCircuitDisplay.py","15"]
-
     process_args = ["./fpga_ws2812/WS2812_FrameBuffer_Animations","0","255"]
-    arganim=1
-    argbrightness=2
 
-    if(process_conf["power"] == "on"):
-        process_args[argbrightness]="255"
-        process_args[arganim]=str(process_conf["animation"])
-    else:
-        process_args[argbrightness]="0"
+    animation=process_conf["animation"]
+
+    if(animation == "0" or animation=="1"):
+
+        process_args = ["./fpga_ws2812/WS2812_FrameBuffer_Animations","0","255"]
+        arganim=1
+        argbrightness=2
+
+        if(process_conf["power"] == "on"):
+            process_args[argbrightness]="255"
+            process_args[arganim]=str(process_conf["animation"])
+        else:
+            process_args[argbrightness]="0"
         
+        return process_args
+
+    elif(animation== "2"):
+        process_args=["python3","./fpga_ws2812/rgb_fluxcapacitor.py"]
+        return process_args
 
 
     return process_args
