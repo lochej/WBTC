@@ -8,13 +8,13 @@ gpiopin=$2
 gpiolevel=$3
 
 #line buffer output and format 0 for falling edge and 1 for rising edge
-gpiomon -bF "%e" $gpiochip $gpiopin | while read line
+while read line
 do
 	if [ $line = $gpiolevel ]
 	then
 		echo $line
 		exit 0
 	fi
-done
+done < <(gpiomon -bF "%e" $gpiochip $gpiopin)
 
 
