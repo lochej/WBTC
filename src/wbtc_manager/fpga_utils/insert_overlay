@@ -1,0 +1,10 @@
+#!/bin/bash
+
+overlaydir=/sys/kernel/config/device-tree/overlays/$1
+dtbofile=$2
+
+rmdir $overlaydir
+
+mkdir $overlaydir
+
+cat $dtbofile > $overlaydir/dtbo 

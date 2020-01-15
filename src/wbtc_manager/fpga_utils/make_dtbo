@@ -1,0 +1,6 @@
+#!/bin/bash
+
+dtsfile=$1.dts
+dtbofile=$1.dtbo
+
+dtc -@ -I dts -O dtb $dtsfile > $dtbofile
