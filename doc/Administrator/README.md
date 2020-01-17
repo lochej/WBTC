@@ -31,6 +31,10 @@ Now that you have access to the board using the USB Serial terminal we'll have t
 3. **NodeRED:** The **full-stack web application** that we use to control the system using the web browser.
 
 ```
+
+#Update the repositories
+sudo apt-get update
+
 #Install build essential
 sudo apt-get install -y build-essential
 
@@ -40,37 +44,38 @@ sudo apt-get install -y device-tree-compiler
 #Install libgpiod and utils
 sudo apt-get install -y gpiod libgpiod-dev
 
+
 #Install NodeRED
 bash <(curl -sL https://raw.githubusercontent.com/node-red/linux-installers/master/deb/update-nodejs-and-nodered)
 ```
-The rest is already packaged in the Debian 10 distribution.
+
+The rest is already packaged in the Debian 10 distribution. 
 
 
 ## Deploy the program files
 
-Copy the files
+Follow this procedure to copy all the necessary files to the **DE0-Nano-SOC** board.
 
-1. fpga_firmware.rbf
-2. fluxcapacitor, timecircuit, fluxcapacitor framebuffer, fpga_service
-3. driver programs
-3. NodeRED flows
-
+[Project files package creation procedure](../../README.md) -> Gathering all the programs section.
 
 ## Configure the system
 
 We need to configure a few things in order to let NodeRED and the rest of the system access a few commands
 
 1. Configure **/tmp** as in the RAM
+
+To mount **/tmp** in the RAM we need to change it to **tmpfs** in the **/etc/fstab** file on the **Debian** system. Simply add the following line to your **/etc/fstab**: 
+
+```
+tmpfs /tmp tmpfs defaults,size=32M 0 0
+```
+or in a terminal run:
+```
+echo 'tmpfs /tmp tmpfs defaults,size=32M 0 0' >> /etc/fstab
+```
+
+Follow the **install_services.sh** procedure to do the following steps:
+
 2. Authorize access to the **date** and **timedatectl** commands with **sudo password and tty**
 3. Enable **NodeRED, timecircuitd, fluxcapacitord, ws2812_fpga_daemon, fluxcapacitorFrameBuffer** on boot with systemd
 4. Add the **fluxcapacitorctl** and **timecircuitctl** to the **PATH** with the symbolic links
-
-
-```
-export WBTC_MGR=/home/debian/wbtc_manager
-sudo ln -s $WBTC_MGR/fluxcapacitor/fluxcapacitorctl.py /usr/local/bin/fluxcapacitor
-sudo ln -s $WBTC_MGR/timecircuit/timecircuitctl.py /usr/local/bin/timecircuitctl
-
-sudo ln -s $WBTC_MGR/timecircuit/timecircuit.service /lib/systemd/system
-sudo ln -s $WBTC_MGR/fluxcapacitor/fluxcapacitor.service /lib/systemd/system
-```

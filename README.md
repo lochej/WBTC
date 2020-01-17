@@ -70,4 +70,4 @@ wbtc_manager/
 Copy your freshly created **wbtc_manager** folder to the **/home/debian/** directory of your DE0-Nano-SOC board.
 
 
-Then just run the [install_services.sh]() file in the **wbtc_manager** folder. It will simply install the files using symlinks and make sure all the rights are enabled.
+Then just run the [install_services.sh](src/wbtc_manager/install_services.sh) file in the **wbtc_manager** folder. It will simply install the files using symlinks and make sure all the rights are enabled.
