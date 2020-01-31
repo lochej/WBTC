@@ -52,4 +52,13 @@ echo "debian ALL=(root) NOPASSWD:/usr/bin/timedatectl" > $SUDOERS_FILE
 echo "debian ALL=(root) NOPASSWD:/bin/date" >> $SUDOERS_FILE
 echo "Defaults: debian !requiretty" >> $SUDOERS_FILE
 
+echo "Enabling TMP to mount as tmpfs"
+
+#Make a safety backup
+cp -v /etc/fstab $WBTC_MGR/fstab.backup
+#Get rid of any mount point for /tmp
+grep -v /tmp < $WBTC_MGR/fstab.backup > /etc/fstab 
+#Mount tmp as tmpfs
+echo "tmpfs /tmp tmpfs size=128M,mode=1777,nosuid,nodev 0 0" >> /etc/fstab
+
 echo "Setup done"
