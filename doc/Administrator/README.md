@@ -40,4 +40,4 @@ Follow the **install_services.sh** procedure to do the following steps:
 
 ## System wiring
 
-Please refer to the [**Wiring Diagram**](../Specs\ And\ Design/Wiring_Diagram_WBTC.pdf) to hook up the Time Circuit Display and Flux Capacitor to the DE0-Nano-SOC board.
+Please refer to the [**Wiring Diagram**](../Specs_and_Design/Wiring_Diagram_WBTC.pdf) to hook up the Time Circuit Display and Flux Capacitor to the DE0-Nano-SOC board.
