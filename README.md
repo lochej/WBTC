@@ -1,11 +1,16 @@
 # WBTC
 Web Based Time Converter repository, where all the work is set up.
 
+The WBTC is a **Polytech Tours** project aiming at showing all the skills studied in the industrial computer science classes.
+
+![WBTC packaged project](doc/Specs_and_Design/images/packaged_project.jpg)
+
+
 Most of the source code is stored here, but to create the full package to install on the DE0-Nano-SOC board, you'll need to access multiple of my repositories.
 
 ## For one user, one manual
 
-The **doc** folder is full of documentation resources that you'll use to rebuild this project. If you are an **Administrator, Developer, Maintener or simple User** of the system you'll be able to find exactly what your role is in this project and what you can do with it.
+The **doc** folder is full of documentation resources that you'll use to rebuild this project. If you are an **Administrator, Developer, Maintener, Demonstrator or a Simple User** of the system you'll be able to find exactly what your role is in this project and what you can do with it.
 
 ## Making the package to run on the board
 
