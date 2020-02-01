@@ -53,3 +53,20 @@ For this, I made a **very nice toturial** and **template project** that you can 
 Carefully read the PDF documentation and you'll be able to run your first HPS / FPGA program in just a few hours (beginners).
 
 You now have all the base information needed to start a new Quartus Prime project and develop you own design architecture for your HPS/FPGA implementation.
+
+### **Developing additionnal software for the WBTC**
+
+You have a full access to the design and specification of the system + the source code associated with it. 
+
+Please have a look at how the WBTC peripherals like the **Time Circuit Display** and **Flux capacitor** are designed.
+
+Here a few links for the documents that will interest you:
+1. [Specifications](../Specs_and_Design/CDS_WBTC_LOCHE_Jeremy.pdf) : where you'll find a general system architecture diagram and design choices
+2. [Design Reference](../Specs_and_Design/CDS_WBTC_LOCHE_Jeremy.pdf) : a document telling you how every component is structured and how you should use it
+3. [Wiring diagram](../Specs_and_Design/Wiring_Diagram_WBTC.pdf) : This is the current system wiring diagram for the peripherals
+
+The full system source code is stored inside [**src folder**](../../src).
+You'll have everyfind regarding the Quartus project to build the FPGA/HPS bitstream and also all of the services installed on the board to control the peripherals.
+
+
+*If you follow the above stated guides, you should be able to work with this system with any issues.*

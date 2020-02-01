@@ -28,7 +28,7 @@ For the rest of this reference manual, you'll need internet connection using the
 
 Follow this procedure to copy all the necessary files to the **DE0-Nano-SOC** board.
 
-[**Project files package creation procedure**](../../README.md) -> Gathering all the programs section.
+[**Project files package creation procedure**](../../README.md) -> **Mandatory programs** and **Gathering all the programs section**.
 
 
 Follow the **install_services.sh** procedure to do the following steps:

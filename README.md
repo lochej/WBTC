@@ -22,6 +22,33 @@ On the board you'll find packages for:
 3. FluxCapacitor WS2812 LED programs
 4. All the system daemons
 
+## Mandatory programs to install from the Internet
+
+Now that you have access to the board using the USB Serial terminal we'll have to deploy all the binaries and programs:
+
+1. **Build Essential:** This is necessary to install the **NodeRED** web services.
+2. **Device tree compiler:** This is necessary to **compile the device tree overlay** for the FPGA programming procedure.
+3. **NodeRED:** The **full-stack web application** that we use to control the system using the web browser.
+
+```
+
+#Update the repositories
+sudo apt-get update
+
+#Install build essential
+sudo apt-get install -y build-essential
+
+#Install DTC
+sudo apt-get install -y device-tree-compiler
+
+#Install libgpiod and utils
+sudo apt-get install -y gpiod libgpiod-dev
+
+
+#Install NodeRED
+bash <(curl -sL https://raw.githubusercontent.com/node-red/linux-installers/master/deb/update-nodejs-and-nodered)
+```
+
 ## Gathering all the programs
 
 The system on the DE0-Nano-SOC board should already be running the following:
@@ -78,3 +105,5 @@ Copy your freshly created **wbtc_manager** folder to the **/home/debian/** direc
 
 
 Then just run the [install_services.sh](src/wbtc_manager/install_services.sh) file in the **wbtc_manager** folder. It will simply install the files using symlinks and make sure all the rights are enabled.
+
+Once this is done you will finally import the NodeRED flows using the procedure : [NodeRED flows install](src/wbtc_manager/NodeRED/README.md)

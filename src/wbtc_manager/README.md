@@ -6,14 +6,10 @@ Here are the following settings you can set/get:
 
 1. *Time Circuit Display*
     + Power : **set, get**
-        + ON
-        + OFF 
+        + on
+        + off
     + Brightness : **set, get**
         + **0** to **100** percents
-    + Langages options : **list, set, get**
-        + FR
-        + EN
-    + Hour mode : **12h + AM/PM** or **24h**
     + Status : **get**
         + OK
         + NOK
@@ -39,12 +35,8 @@ Here are the following settings you can set/get:
 
 ## Node red
 
-```
-sudo apt install build-essential
-sudo apt install curl
-bash <(curl -sL https://raw.githubusercontent.com/node-red/linux-installers/master/deb/update-nodejs-and-nodered)
+This is the main website hosted on the board and showing the controls.
 
-```
 
 ## Time Circuit Control
 
