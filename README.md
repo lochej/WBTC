@@ -12,6 +12,8 @@ Most of the source code is stored here, but to create the full package to instal
 
 The **doc** folder is full of documentation resources that you'll use to rebuild this project. If you are an **Administrator, Developer, Maintener, Demonstrator or a Simple User** of the system you'll be able to find exactly what your role is in this project and what you can do with it.
 
+*Check out the [doc folder](doc/) for more information !*
+
 ## Making the package to run on the board
 
 On the board you'll find packages for:
