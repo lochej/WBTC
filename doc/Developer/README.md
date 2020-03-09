@@ -62,7 +62,7 @@ Please have a look at how the WBTC peripherals like the **Time Circuit Display**
 
 Here a few links for the documents that will interest you:
 1. [Specifications](../Specs_and_Design/CDS_WBTC_LOCHE_Jeremy.pdf) : where you'll find a general system architecture diagram and design choices
-2. [Design Reference](../Specs_and_Design/CDS_WBTC_LOCHE_Jeremy.pdf) : a document telling you how every component is structured and how you should use it
+2. [Design Reference](../Specs_and_Design/CA_WBTC_LOCHE_Jeremy.pdf) : a document telling you how every component is structured and how you should use it
 3. [Wiring diagram](../Specs_and_Design/Wiring_Diagram_WBTC.pdf) : This is the current system wiring diagram for the peripherals
 
 The full system source code is stored inside [**src folder**](../../src).
